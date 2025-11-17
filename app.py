@@ -65,25 +65,25 @@ def process_one_line(one_line):
 
     # create objects depending on species
     if "hyena" in a_species:
-        my_hyena = Hyena("temp", "temp", birth_day, color, a_sex, weight, from_zoo, current_date)
+        my_hyena = Hyena("aName","anID", birth_day, color, a_sex, weight, from_zoo, current_date)
         my_hyena.name = Hyena.get_hyena_name(my_hyena)
         my_hyena.animal_ID = "Hy" + str(Hyena.numofHyenas).zfill(2)
         list_of_hyenas.append(my_hyena)
 
     elif "lion" in a_species:
-        my_lion = Lion("temp", "temp", birth_day, color, a_sex, weight, from_zoo, current_date)
+        my_lion = Lion("aName","anID" , birth_day, color, a_sex, weight, from_zoo, current_date)
         my_lion.name = Lion.get_lion_name(my_lion)
         my_lion.animal_ID = "Li" + str(Lion.numoflions).zfill(2)
         list_of_lions.append(my_lion)
 
     elif "tiger" in a_species:
-        my_tiger = Tiger("temp", "temp", birth_day, color, a_sex, weight, from_zoo, current_date)
+        my_tiger = Tiger("aName", "anID", birth_day, color, a_sex, weight, from_zoo, current_date)
         my_tiger.name = Tiger.get_tiger_name(my_tiger)
         my_tiger.animal_ID = "Ti" + str(Tiger.numofTigers).zfill(2)
         list_of_tigers.append(my_tiger)
 
     elif "bear" in a_species:
-        my_bear = Bear("temp", "temp", birth_day, color, a_sex, weight, from_zoo, current_date)
+        my_bear = Bear("aName", "anID", birth_day, color, a_sex, weight, from_zoo, current_date)
         my_bear.name = Bear.get_bear_name(my_bear)
         my_bear.animal_ID = "Be" + str(Bear.numofBears).zfill(2)
         list_of_bears.append(my_bear)
@@ -121,4 +121,5 @@ for b in list_of_bears:
 print("\nTiger Habitat:")
 for t in list_of_tigers:
     print(f"{t.animal_ID}, {t.name}; birthdate: {t.birth_date}; {t.color}; {t.sex}; {t.weight}; {t.originating_zoo}; arrived: {t.date_arrival}")
+
 
